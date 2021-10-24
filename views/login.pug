@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+    body
+        form(action="/auth/login_process" method="post")
+            p
+                input(type="text", name="name" placeholder="name")
+            p
+                input(type="text", name="passwd" placeholder="pwd")
+            p
+                input(type="submit", value="login")

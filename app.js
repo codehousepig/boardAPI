@@ -1,43 +1,27 @@
-const express = require('express');
-
-// const sqlite3 = require('sqlite3').verbose();
-// const db = new sqlite3.Database('./db/board.db', err => {
-//     if (err) {
-//         return console.error(err.message);
-//     }
-//     console.log("Successful connection to the database 'board.db'");
-// });
+var express = require('express');
+var session = require('express-session');
+var FileStore = require('session-file-store')(session);
 
 const app = express();
 const bodyParser = require('body-parser');
-const user = require('./routes');
+
+const user = require('./routes/user');
+const login = require('./routes/login');
+const view = require('./routes/view');
+
+app.set('view engine', 'pug');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
+app.use(session({
+    secret: 'test',
+    resave: false,
+    saveUninitialized: true,
+    store: new FileStore()
+}));
 
-app.use('/users', user);
-
-// app.get('/t', (req, res) => {
-//     const query = 'select * from post';
-//     db.all(query, (err, rows) => {
-//         if (err) {
-//             throw err;
-//         }
-//         rows.forEach((row) => {
-//             console.log(row);
-//             res.json(row);
-//         });
-//     });
-// });
-
-/*
-db.close((err) => {
-    if (err) {
-        console.error(err.message);
-    } else {
-        console.log('Close the database connection.');
-    }
-});
-*/
+app.use('/posts', user);
+app.use('/auth', login);
+app.use('/', view);
 
 module.exports = app;

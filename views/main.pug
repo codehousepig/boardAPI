@@ -1,0 +1,36 @@
+doctype html
+html
+    head
+    body
+        if is_logined
+            p= email
+            a(href="/auth/logout") loginout
+            div
+                form(action="/create" method="post")
+                    p
+                        input(type="text", name="title" placeholder="제목")
+                    p
+                        input(type="text", name="content" placeholder="내용")
+                    p
+                        input(type="submit", value="CREATE" )
+            div
+                form(action="/delete" method="post")
+                    p
+                        input(type="text", name="pno" placeholder="게시물번호")
+                    p
+                        input(type="submit", value="DELETE")
+            div
+                form(action="/update" method="post")
+                    p
+                        input(type="text", name="pno" placeholder="게시물번호")
+                    p
+                        input(type="text", name="title" placeholder="제목")
+                    p
+                        input(type="text", name="content" placeholder="내용")
+                    p
+                        input(type="submit", value="UPDATE")
+        else
+            p
+                a(href="/auth/login") login
+            p
+                a(href="/auth/signup") signup
