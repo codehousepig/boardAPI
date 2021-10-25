@@ -106,8 +106,8 @@ Method: POST, 127.0.0.1:3000/auth/login_process
 </div>
 <br>
 
-10. 로그아웃 <br>
-Method: GET, 127.0.0.1:3000/auth/logout
+10. 로그아웃 -> 11. 로그인, 회원가입 UI <br>
+Method: GET, 127.0.0.1:3000/auth/logout -> Method: GET, 127.0.0.1:3000/
 <div>
   <img src="https://user-images.githubusercontent.com/61304585/138643468-8f28ea51-e7f4-4713-8c10-4a322deda4ae.png"  width="200"> 
 </div>
@@ -117,3 +117,44 @@ Method: GET, 127.0.0.1:3000/auth/logout
   <img src="https://user-images.githubusercontent.com/61304585/138643378-c7746c2b-13bc-4199-91ee-e555c15462ab.png"  width="500"> 
 </div>
 <br>
+
+12. 로그인 이후 글 작성 UI <br>
+Method: POST, 127.0.0.1:3000/create
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138644612-f0dcca07-2a59-4936-8e7d-08fc5863c4fe.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138644762-c1e286de-9f3b-4a9a-acbe-d6812d83a1dd.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138644804-b39b1863-ff54-4c3d-b36d-7f230a62157f.png"  width="500">
+  <img src="https://user-images.githubusercontent.com/61304585/138645007-1607653f-755e-4315-a2f8-a6d9a52d0efa.png"  width="500"> 
+</div>
+<br>
+
+13. 로그인 이후 글 삭제 UI <br>
+Method: POST, 127.0.0.1:3000/delete
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138645280-daac569c-9065-4496-b45b-b898977c7884.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138645348-551c3465-2596-49ff-aadb-04290d27d899.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138645160-a51cfd4b-dee0-41be-a6ec-bff6faa582a7.png"  width="500">
+  <img src="https://user-images.githubusercontent.com/61304585/138645467-8e809a97-57e0-46e7-8aa2-4700309ce7ff.png"  width="500"> 
+</div>
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138645577-b461b3d9-adf6-40f4-ab69-0f61d3c2d87c.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138645601-83e95950-3247-4b44-afc8-1bf91677df68.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138645874-41385177-c886-459c-a4b6-92355f0ca9d2.png"  width="500"> 
+</div>
+<br>
+
+14. 로그인 이후 글 수정 UI <br>
+Method: POST, 127.0.0.1:3000/update
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138645826-79742215-30e7-4a70-8510-ef66e5b7beae.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138646044-e925b3d6-cfaa-47de-abb9-c66c47eadbf9.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138646082-f740456c-d6ff-43c7-b32c-3ecc2b816e0b.png"  width="500"> 
+</div>
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138646189-23c713f1-a982-413a-8073-88fbc60310ee.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138646261-1a824674-edea-4ea4-925b-bb284ee9172f.png"  width="400"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138646317-d1543495-aa90-43ba-9f06-0467a5f62d5d.png"  width="500"> 
+</div>
+<br>
+
+### api 명세
