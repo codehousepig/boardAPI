@@ -65,3 +65,55 @@ Method: DELETE, 127.0.0.1:3000/posts/25
   <img src="https://user-images.githubusercontent.com/61304585/138639150-a711d85f-8b87-45fd-b70c-247132174de8.png"  width="500"> 
 </div>
 <br>
+
+6. 회원가입 화면 - view <br>
+Method: GET, 127.0.0.1:3000/auth/signup
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138640802-dcd3a5f4-bc3a-4e78-a84a-47c87abbc35c.png"  width="200"> 
+</div>
+<br>
+
+7. 회원가입 <br>
+Method: POST, 127.0.0.1:3000/auth/signup
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138641867-39ff7ff1-949b-42af-bc9a-0ba490871ae6.png"  width="200"> 
+</div>
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138641943-8e1a66a1-994d-4d09-905d-ed96de466a23.png"  width="500"> 
+</div>
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138641982-febd2b8a-2d14-4dd0-b855-306d51a7fd27.png"  width="200"> 
+</div>
+<br>
+
+8. 로그인 화면 - view <br>
+Method: GET, 127.0.0.1:3000/auth/login
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138642755-7f3d92f2-2a9e-47b5-9318-688239694d1e.png"  width="200"> 
+</div>
+<br>
+
+9. 로그인 <br>
+Method: POST, 127.0.0.1:3000/auth/login_process
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138642378-1e4d8ff9-6dc3-478c-92b5-60c17980e3ec.png"  width="200"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138642459-934731fc-835c-441e-b693-3a32ca39eb9c.png"  width="200"> 
+</div>
+<br>
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138642903-7b91ce98-841b-4e55-9365-419cb2848d1f.png"  width="500"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138643147-21619775-8615-4e81-a6a8-32816ebf772b.png"  width="500"> 
+</div>
+<br>
+
+10. 로그아웃 <br>
+Method: GET, 127.0.0.1:3000/auth/logout
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138643468-8f28ea51-e7f4-4713-8c10-4a322deda4ae.png"  width="200"> 
+</div>
+<br>
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138643349-6cdcaa23-e721-4828-b2d8-3fbbbddb0123.png"  width="500"> 
+  <img src="https://user-images.githubusercontent.com/61304585/138643378-c7746c2b-13bc-4199-91ee-e555c15462ab.png"  width="500"> 
+</div>
+<br>
