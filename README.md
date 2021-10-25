@@ -2,13 +2,13 @@
 [위코드 x 원티드] 백엔드 프리온보딩 선발 과제
 
 ---
-### 구현한 방법과 이유에 대한 간략한 내용
+## 구현한 방법과 이유에 대한 간략한 내용
 사용언어: JavaScript <br>
 프레임워크: Express <br>
 구현한 방법: 라우팅 역할을 해주는 A.js 와 로직을 담당하는 A.ctrl.js 를 먼저 만들고, 테스트를 위한 간단한 view 를 만들었습니다. <br>
 이유: 스프링 부트를 이용한 MVC 디자인 패턴에 익숙하였고, 웹에서 더 많이 사용하는 JavaScript를 선택하였습니다.
 
-### 자세한 실행 방법
+## 자세한 실행 방법
 (Postman 으로 테스트 진행) <br>
 0. 서버 실행
 <div>
@@ -157,4 +157,133 @@ Method: POST, 127.0.0.1:3000/update
 </div>
 <br>
 
-### api 명세
+## api 명세
+<div>
+  <img src="https://user-images.githubusercontent.com/61304585/138657730-ebfa3427-77f0-4741-9fe3-f450c7ec9bfd.png"  width="300"> 
+</div>
+<br>
+
+## 글
+### 3. 작성
+``` javascript
+POST /posts
+```
+* Request
+```json
+{
+    "title":"test22",
+    "content":"test...22"
+}
+```
+* Response
+```json
+{
+    "message": "Create Success!"
+}
+```
+### 4. 수정
+``` javascript
+PUT /posts/{pno}
+```
+* Request
+```json
+{
+    "title":"test25",
+    "content":"test...25"
+}
+```
+* Response
+```json
+{
+    "message": "Update Success!"
+}
+```
+### 5. 삭제
+``` javascript
+DELETE /posts/{pno}
+```
+* Response
+```json
+{
+    "message": "Delete Success!"
+}
+```
+
+## 회원
+### 7. 가입
+``` javascript
+POST /auth/signup
+```
+* Request
+```json
+{
+    "name":"user7",
+    "passwd":"7777"
+}
+```
+* Response
+```
+redirect(`/`)
+```
+### 9. 로그인
+``` javascript
+POST /auth/login_process
+```
+* Request
+```json
+{
+    "name":"user7",
+    "passwd":"7777"
+}
+```
+* Response
+```
+redirect(`/`)
+```
+
+## UI
+### 12. 글 작성
+``` javascript
+POST /create
+```
+* Request
+```json
+{
+    "title":"test22",
+    "content":"test...22"
+}
+```
+* Response
+```
+redirect('/');
+```
+### 13. 글 삭제
+``` javascript
+POST /delete
+```
+* Request
+```json
+{
+    "pno":"26"
+}
+```
+* Response
+```
+redirect('/');
+```
+### 14. 글 수정
+``` javascript
+POST /update
+```
+* Request
+```json
+{
+    "pno":"18"
+    "title":"loginupdate",
+    "content":"update...user"
+}
+```
+* Response
+```
+redirect('/');
+```
