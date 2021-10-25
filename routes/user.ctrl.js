@@ -83,8 +83,8 @@ const create = function(req, res){
     const query =
         `insert into post(title, content, author, regdate, moddate) 
             values ('${title}', '${content}', '${author}', '${regdate}', '${moddate}')`;
-    db.all(query, (err) => { if (err)  throw err; });
-    res.status(201);
+    db.all(query, (err) => { if (err) throw err; });
+    res.status(201).json({message: 'Create Success!'});
 }
 
 const del = function(req, res){
@@ -107,7 +107,7 @@ const del = function(req, res){
                     const queryDel = `delete from post where pno == ${pno}`;
                     // db.all(queryDel, (err) => { if (err) throw err; });
                     console.log(queryDel);
-                    res.status(204);
+                    res.json({message: 'Delete Success!'});
                     break;
                 } else {
                     console.log(name + "이 삭제 가능한 게시물은 " + result[i].pno + "번 게시물입니다.");
@@ -147,7 +147,7 @@ const update = function(req, res){
                         WHERE pno == '${pno}'`;
                     // db.all(queryUpdate, (err) => { if (err) throw err; });
                     console.log(queryUpdate);
-                    res.status(204);
+                    res.json({message: 'Update Success!'});
                     break;
                 } else {
                     console.log(author + "이 수정 가능한 게시물은 " + result[i].pno + "번 게시물입니다.");
@@ -156,16 +156,6 @@ const update = function(req, res){
         });
     }
 };
-
-/*
-db.close((err) => {
-    if (err) {
-        console.error(err.message);
-    } else {
-        console.log('Close the database connection.');
-    }
-});
-*/
 
 module.exports = {
     all: all,

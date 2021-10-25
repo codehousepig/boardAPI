@@ -57,7 +57,7 @@ const postDelete = function (req, res) {
                     const queryDel = `delete from post where pno == ${pno}`;
                     db.all(queryDel, (err) => { if (err) throw err; });
                     console.log(queryDel);
-                    res.status(204);
+                    res.redirect('/');
                     break;
                 } else {
                     console.log(name + "이 삭제 가능한 게시물은 " + result[i].pno + "번 게시물입니다.");
@@ -97,7 +97,7 @@ const postUpdate = function (req, res) {
                         WHERE pno == '${pno}'`;
                     db.all(queryUpdate, (err) => { if (err) throw err; });
                     console.log(queryUpdate);
-                    res.status(204);
+                    res.redirect('/');
                     break;
                 } else {
                     console.log(author + "이 수정 가능한 게시물은 " + result[i].pno + "번 게시물입니다.");
